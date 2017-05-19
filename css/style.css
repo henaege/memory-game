@@ -1,0 +1,82 @@
+img {
+    max-width: 100%;
+}
+body {
+    background-image: url('../default/stars.jpg');
+}
+
+#persp {
+    perspective: 500px;
+}
+
+.card {
+    height: 200px;
+    max-width: 200px;
+    border-top: .5px solid #EBED5B;
+    border-left: .5px solid #EBED5B;
+    margin: 10px;
+    perspective: 500px;
+    padding: 0;
+}
+
+.card-holder {
+    width: 200px;
+    /*the children will be absolute, so this needs to be relative*/
+    position: relative;
+    transform-style: preserve-3d;
+    transition:  1s all;
+    cursor: pointer;
+    padding: 0;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    background: url('../default/star-wars.jpg') no-repeat 50%;
+    height: 200px;
+    min-width: 200px;
+}
+
+.flip, .matched, .flip-temp{
+    transform: rotateY(180deg);
+}
+
+/*#modal-window {
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    top: 25%;
+    left: 15vw;
+    width: 70%;
+    height: 50%;
+    perspective: 200px;
+    transition: all 3s;
+}*/
+
+.modal-container {
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    margin: 15% auto;
+    font-size: 10em;
+    transition: all 3s;
+    perspective: 500px;
+}
+
+.message {
+    position: relative;
+    color: yellow;
+    transform: rotateX(30deg);
+    transform: translateY(-500px);
+    padding: 20px;
+    margin: auto;
+}
