@@ -71,13 +71,10 @@ let cards2 = [];
                 let matchedCards = $('.matched');
                 if (matchedCards.length == gridSize) {
                     // Modal appearance!
-                    let showModal = function() {
-                        $('#modal-window').fadeIn('slow');
-                        $(".close").click(()=> {
-                            $('#modal-window').fadeOut('slow');
-                        });
-                    };
-                    showModal();
+                    // $('#messageWindow').on('show.bs.modal')
+                    // };
+                    $('#modalWindow').modal('show');
+                    
                 }
             } else {
                 // No Match! flip back over
